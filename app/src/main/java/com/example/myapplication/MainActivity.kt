@@ -45,8 +45,7 @@ class MainDialogWorkaround : MainDialog() {
         if (focusOnStop != View.NO_ID) {
             val hierarchy = outState.getBundle("android:savedDialogState")
                 ?.getBundle("android:dialogHierarchy")
-            if (hierarchy != null &&
-                hierarchy.getInt("android:focusedViewId", View.NO_ID) == View.NO_ID) {
+            if (hierarchy != null) {
                 hierarchy.putInt("android:focusedViewId", focusOnStop)
             }
         }
